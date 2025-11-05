@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мнения - WebDev Solutions</title>
+  </head>
+  <body>
+    <h1>WebDev Solutions</h1>
+    <hr />
+
+    <h2>Меню</h2>
+    <ul>
+      <li><a href="index.html">За фирмата</a></li>
+      <li><a href="products.html">Продукти</a></li>
+      <li><a href="orders.html">Поръчки</a></li>
+      <li><a href="reviews.html">Мнения</a></li>
+      <li><a href="../zadacha-1/page1.html">Работа</a></li>
+    </ul>
+    <hr />
+
+    <h2>Споделете вашето мнение</h2>
+    <p>
+      <em
+        >Вашето мнение е важно за нас! Моля, споделете опита си с нашите
+        продукти и услуги.</em
+      >
+    </p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend><strong>Информация за клиента</strong></legend>
+
+        <label for="customer_name">Вашето име: *</label><br />
+        <input
+          type="text"
+          id="customer_name"
+          name="customer_name"
+          size="40"
+          required
+          placeholder="Георги Иванов"
+        /><br /><br />
+
+        <label for="customer_email">Имейл адрес: *</label><br />
+        <input
+          type="email"
+          id="customer_email"
+          name="customer_email"
+          size="40"
+          required
+          placeholder="georgi@example.com"
+        /><br /><br />
+
+        <label for="phone">2. Телефон за връзка: *</label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{10}"
+          required
+          placeholder="0888123456"
+        /><br />
+        <small>10 цифри без интервали</small><br /><br />
+
+        <label for="month">1. Месец на даване на мнението: *</label><br />
+        <input
+          type="month"
+          id="month"
+          name="month"
+          required
+          value="2025-11"
+        /><br /><br />
+
+        <label for="purchase_date">Дата на покупка/поръчка:</label><br />
+        <input
+          type="date"
+          id="purchase_date"
+          name="purchase_date"
+          max="2025-11-05"
+        /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend><strong>Оценка на продукта/услугата</strong></legend>
+
+        <label for="product_purchased">Закупен продукт/услуга: *</label><br />
+        <select id="product_purchased" name="product_purchased" required>
+          <option value="">-- Изберете --</option>
+          <option value="corporate">Корпоративен уеб сайт</option>
+          <option value="ecommerce">E-commerce платформа</option>
+          <option value="react">React приложение</option>
+          <option value="landing">Landing Page</option>
+          <option value="wordpress">WordPress сайт</option>
+          <option value="seo">SEO оптимизация</option></select
+        ><br /><br />
+
+        <label for="rating">3. Оценка на продукта (1-10): *</label><br />
+        <input
+          type="range"
+          id="rating"
+          name="rating"
+          min="1"
+          max="10"
+          value="5"
+          oninput="this.nextElementSibling.value = this.value"
+        />
+        <output>5</output>/10<br /><br />
+
+        <label for="price">4. Цена на закупения продукт: *</label><br />
+        <input type="radio" id="price1" name="price" value="0-1000" required />
+        <label for="price1">0 - 1000 лв</label><br />
+        <input type="radio" id="price2" name="price" value="1000-2000" />
+        <label for="price2">1000 - 2000 лв</label><br />
+        <input type="radio" id="price3" name="price" value="2000-3000" />
+        <label for="price3">2000 - 3000 лв</label><br />
+        <input type="radio" id="price4" name="price" value="3000+" />
+        <label for="price4">Над 3000 лв</label><br /><br />
+
+        <label for="price_exact">Точна платена цена (лв):</label><br />
+        <input
+          type="number"
+          id="price_exact"
+          name="price_exact"
+          min="0"
+          step="0.01"
+          placeholder="1500.00"
+        /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend><strong>Вашата оценка</strong></legend>
+
+        <label>Качество на изпълнение:</label><br />
+        <input
+          type="radio"
+          id="quality_excellent"
+          name="quality"
+          value="excellent"
+        />
+        <label for="quality_excellent">⭐⭐⭐⭐⭐ Отлично</label><br />
+        <input type="radio" id="quality_good" name="quality" value="good" />
+        <label for="quality_good">⭐⭐⭐⭐ Много добро</label><br />
+        <input
+          type="radio"
+          id="quality_average"
+          name="quality"
+          value="average"
+        />
+        <label for="quality_average">⭐⭐⭐ Добро</label><br />
+        <input type="radio" id="quality_poor" name="quality" value="poor" />
+        <label for="quality_poor">⭐⭐ Задоволително</label><br />
+        <input type="radio" id="quality_bad" name="quality" value="bad" />
+        <label for="quality_bad">⭐ Слабо</label><br /><br />
+
+        <label>Оценете различни аспекти на услугата:</label><br />
+        <input
+          type="checkbox"
+          id="aspect_communication"
+          name="aspects"
+          value="communication"
+        />
+        <label for="aspect_communication">Отлична комуникация</label><br />
+        <input
+          type="checkbox"
+          id="aspect_deadline"
+          name="aspects"
+          value="deadline"
+        />
+        <label for="aspect_deadline">Спазени срокове</label><br />
+        <input
+          type="checkbox"
+          id="aspect_quality"
+          name="aspects"
+          value="quality"
+        />
+        <label for="aspect_quality">Високо качество</label><br />
+        <input type="checkbox" id="aspect_price" name="aspects" value="price" />
+        <label for="aspect_price">Справедлива цена</label><br />
+        <input
+          type="checkbox"
+          id="aspect_support"
+          name="aspects"
+          value="support"
+        />
+        <label for="aspect_support">Добра следпродажбена поддръжка</label
+        ><br /><br />
+
+        <label>Бихте ли препоръчали услугите ни?</label><br />
+        <input
+          type="radio"
+          id="recommend_yes"
+          name="recommend"
+          value="yes"
+          required
+        />
+        <label for="recommend_yes">Да, определено</label><br />
+        <input
+          type="radio"
+          id="recommend_maybe"
+          name="recommend"
+          value="maybe"
+        />
+        <label for="recommend_maybe">Може би</label><br />
+        <input type="radio" id="recommend_no" name="recommend" value="no" />
+        <label for="recommend_no">Не</label><br /><br />
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend><strong>Допълнителни коментари</strong></legend>
+
+        <label for="comments">5. Вашите коментари и впечатления: *</label><br />
+        <textarea
+          id="comments"
+          name="comments"
+          rows="6"
+          cols="60"
+          required
+          placeholder="Споделете вашето мнение, препоръки за подобрение или какво ви хареса най-много..."
+        ></textarea
+        ><br /><br />
+
+        <label for="improvements">Какво може да бъде подобрено?</label><br />
+        <textarea
+          id="improvements"
+          name="improvements"
+          rows="4"
+          cols="60"
+          placeholder="Вашите предложения за подобрение..."
+        ></textarea
+        ><br /><br />
+
+        <label for="file_upload">Прикачете снимка (ако желаете):</label><br />
+        <input
+          type="file"
+          id="file_upload"
+          name="file_upload"
+          accept="image/*"
+        /><br /><br />
+      </fieldset>
+
+      <br />
+
+      <input type="checkbox" id="consent" name="consent" required />
+      <label for="consent"
+        >Съгласен/съгласна съм мнението ми да бъде публикувано на сайта *</label
+      ><br /><br />
+
+      <input type="submit" value="Изпрати мнение" />
+      <input type="reset" value="Изчисти формата" />
+    </form>
+
+    <p><small>* Задължителни полета</small></p>
+
+    <hr />
+
+    <h3>Мнения от клиенти</h3>
+    <table border="1" cellpadding="10" cellspacing="0" width="100%">
+      <tr>
+        <th>Клиент</th>
+        <th>Продукт</th>
+        <th>Оценка</th>
+        <th>Коментар</th>
+        <th>Дата</th>
+      </tr>
+      <tr>
+        <td><strong>Мария Петрова</strong></td>
+        <td>E-commerce платформа</td>
+        <td>⭐⭐⭐⭐⭐ 10/10</td>
+        <td>
+          <em
+            >"Изключително съм доволна! Професионално изпълнение и спазени
+            срокове."</em
+          >
+        </td>
+        <td>Октомври 2025</td>
+      </tr>
+      <tr>
+        <td><strong>Иван Стоянов</strong></td>
+        <td>Корпоративен сайт</td>
+        <td>⭐⭐⭐⭐ 9/10</td>
+        <td><em>"Много добра работа, препоръчвам!"</em></td>
+        <td>Септември 2025</td>
+      </tr>
+      <tr>
+        <td><strong>Елена Димитрова</strong></td>
+        <td>Landing Page</td>
+        <td>⭐⭐⭐⭐⭐ 10/10</td>
+        <td><em>"Перфектно! Точно каквото исках."</em></td>
+        <td>Август 2025</td>
+      </tr>
+    </table>
+
+    <hr />
+    <p>
+      <small>&copy; 2025 WebProDev Solutions. Всички права запазени.</small>
+    </p>
+  </body>
+</html>
