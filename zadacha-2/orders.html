@@ -36,50 +36,12 @@
           <option value="wordpress">WordPress сайт - 1200 лв</option>
           <option value="seo">SEO оптимизация - 500 лв/месец</option></select
         ><br /><br />
-
-        <label for="quantity">5. Брой продукти/услуги: *</label><br />
-        <input
-          type="number"
-          id="quantity"
-          name="quantity"
-          min="1"
-          max="10"
-          value="1"
-          required
-        /><br /><br />
-
-        <label>Спешност на проекта:</label><br />
-        <input type="radio" id="normal" name="urgency" value="normal" checked />
-        <label for="normal">Стандартна (30 дни)</label><br />
-        <input type="radio" id="fast" name="urgency" value="fast" />
-        <label for="fast">Ускорена (15 дни) +20%</label><br />
-        <input type="radio" id="express" name="urgency" value="express" />
-        <label for="express">Експресна (7 дни) +50%</label><br /><br />
       </fieldset>
 
       <br />
 
       <fieldset>
         <legend><strong>Данни на купувача</strong></legend>
-
-        <label for="name">Име и фамилия: *</label><br />
-        <input
-          type="text"
-          id="name"
-          name="name"
-          size="40"
-          required
-          placeholder="Александър Минчев"
-        /><br /><br />
-
-        <label for="company">Фирма/Организация:</label><br />
-        <input
-          type="text"
-          id="company"
-          name="company"
-          size="40"
-          placeholder="Примерна ЕООД"
-        /><br /><br />
 
         <label for="address">2. Адрес за доставка/фактура: *</label><br />
         <textarea
@@ -102,17 +64,6 @@
           placeholder="aminchev@example.com"
         /><br /><br />
 
-        <label for="phone">Телефон за връзка: *</label><br />
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          pattern="[0-9]{10}"
-          required
-          placeholder="0888123456"
-        /><br />
-        <small>Формат: 10 цифри без интервали</small><br /><br />
-
         <label for="delivery">4. Желана дата на доставка/стартиране: *</label
         ><br />
         <input
@@ -122,48 +73,24 @@
           min="2025-11-06"
           required
         /><br /><br />
+
+
+        <label for="quantity">5. Брой продукти/услуги: *</label><br />
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          max="10"
+          value="1"
+          required
+        /><br /><br />
+
       </fieldset>
+
+      
 
       <br />
-
-      <fieldset>
-        <legend><strong>Допълнителни опции</strong></legend>
-
-        <label>Допълнителни услуги:</label><br />
-        <input type="checkbox" id="hosting" name="extras" value="hosting" />
-        <label for="hosting">Хостинг за 1 година (+200 лв)</label><br />
-        <input type="checkbox" id="domain" name="extras" value="domain" />
-        <label for="domain">Домейн .bg или .com (+50 лв)</label><br />
-        <input
-          type="checkbox"
-          id="maintenance"
-          name="extras"
-          value="maintenance"
-        />
-        <label for="maintenance">Годишна поддръжка (+600 лв)</label><br />
-        <input type="checkbox" id="ssl" name="extras" value="ssl" />
-        <label for="ssl">SSL сертификат (+100 лв)</label><br /><br />
-
-        <label for="notes">Допълнителни бележки:</label><br />
-        <textarea
-          id="notes"
-          name="notes"
-          rows="4"
-          cols="40"
-          placeholder="Опишете вашите специфични изисквания..."
-        ></textarea
-        ><br /><br />
-
-        <label for="referral">Как научихте за нас?</label><br />
-        <select id="referral" name="referral">
-          <option value="">-- Изберете --</option>
-          <option value="google">Google търсене</option>
-          <option value="facebook">Facebook</option>
-          <option value="friend">Препоръка от приятел</option>
-          <option value="ad">Реклама</option>
-          <option value="other">Друго</option></select
-        ><br /><br />
-      </fieldset>
 
       <br />
 

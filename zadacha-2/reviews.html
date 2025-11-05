@@ -29,40 +29,7 @@
 
     <form action="#" method="post">
       <fieldset>
-        <legend><strong>Информация за клиента</strong></legend>
-
-        <label for="customer_name">Вашето име: *</label><br />
-        <input
-          type="text"
-          id="customer_name"
-          name="customer_name"
-          size="40"
-          required
-          placeholder="Георги Иванов"
-        /><br /><br />
-
-        <label for="customer_email">Имейл адрес: *</label><br />
-        <input
-          type="email"
-          id="customer_email"
-          name="customer_email"
-          size="40"
-          required
-          placeholder="georgi@example.com"
-        /><br /><br />
-
-        <label for="phone">2. Телефон за връзка: *</label><br />
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          pattern="[0-9]{10}"
-          required
-          placeholder="0888123456"
-        /><br />
-        <small>10 цифри без интервали</small><br /><br />
-
-        <label for="month">1. Месец на даване на мнението: *</label><br />
+        <label for="month">Месец на даване на мнението: *</label><br />
         <input
           type="month"
           id="month"
@@ -71,12 +38,12 @@
           value="2025-11"
         /><br /><br />
 
-        <label for="purchase_date">Дата на покупка/поръчка:</label><br />
+        <label for="user_phone">Телефон</label><br />
         <input
-          type="date"
-          id="purchase_date"
-          name="purchase_date"
-          max="2025-11-05"
+          type="number"
+          id="user_phone"
+          name="user_phone"
+  
         /><br /><br />
       </fieldset>
 
@@ -96,7 +63,7 @@
           <option value="seo">SEO оптимизация</option></select
         ><br /><br />
 
-        <label for="rating">3. Оценка на продукта (1-10): *</label><br />
+        <label for="rating">Оценка на продукта (1-10): *</label><br />
         <input
           type="range"
           id="rating"
@@ -108,7 +75,7 @@
         />
         <output>5</output>/10<br /><br />
 
-        <label for="price">4. Цена на закупения продукт: *</label><br />
+        <label for="price">Цена на закупения продукт: *</label><br />
         <input type="radio" id="price1" name="price" value="0-1000" required />
         <label for="price1">0 - 1000 лв</label><br />
         <input type="radio" id="price2" name="price" value="1000-2000" />
@@ -118,7 +85,6 @@
         <input type="radio" id="price4" name="price" value="3000+" />
         <label for="price4">Над 3000 лв</label><br /><br />
 
-        <label for="price_exact">Точна платена цена (лв):</label><br />
         <input
           type="number"
           id="price_exact"
@@ -127,86 +93,8 @@
           step="0.01"
           placeholder="1500.00"
         /><br /><br />
-      </fieldset>
 
-      <br />
-
-      <fieldset>
-        <legend><strong>Вашата оценка</strong></legend>
-
-        <label>Качество на изпълнение:</label><br />
-        <input
-          type="radio"
-          id="quality_excellent"
-          name="quality"
-          value="excellent"
-        />
-        <label for="quality_excellent">⭐⭐⭐⭐⭐ Отлично</label><br />
-        <input type="radio" id="quality_good" name="quality" value="good" />
-        <label for="quality_good">⭐⭐⭐⭐ Много добро</label><br />
-        <input
-          type="radio"
-          id="quality_average"
-          name="quality"
-          value="average"
-        />
-        <label for="quality_average">⭐⭐⭐ Добро</label><br />
-        <input type="radio" id="quality_poor" name="quality" value="poor" />
-        <label for="quality_poor">⭐⭐ Задоволително</label><br />
-        <input type="radio" id="quality_bad" name="quality" value="bad" />
-        <label for="quality_bad">⭐ Слабо</label><br /><br />
-
-        <label>Оценете различни аспекти на услугата:</label><br />
-        <input
-          type="checkbox"
-          id="aspect_communication"
-          name="aspects"
-          value="communication"
-        />
-        <label for="aspect_communication">Отлична комуникация</label><br />
-        <input
-          type="checkbox"
-          id="aspect_deadline"
-          name="aspects"
-          value="deadline"
-        />
-        <label for="aspect_deadline">Спазени срокове</label><br />
-        <input
-          type="checkbox"
-          id="aspect_quality"
-          name="aspects"
-          value="quality"
-        />
-        <label for="aspect_quality">Високо качество</label><br />
-        <input type="checkbox" id="aspect_price" name="aspects" value="price" />
-        <label for="aspect_price">Справедлива цена</label><br />
-        <input
-          type="checkbox"
-          id="aspect_support"
-          name="aspects"
-          value="support"
-        />
-        <label for="aspect_support">Добра следпродажбена поддръжка</label
-        ><br /><br />
-
-        <label>Бихте ли препоръчали услугите ни?</label><br />
-        <input
-          type="radio"
-          id="recommend_yes"
-          name="recommend"
-          value="yes"
-          required
-        />
-        <label for="recommend_yes">Да, определено</label><br />
-        <input
-          type="radio"
-          id="recommend_maybe"
-          name="recommend"
-          value="maybe"
-        />
-        <label for="recommend_maybe">Може би</label><br />
-        <input type="radio" id="recommend_no" name="recommend" value="no" />
-        <label for="recommend_no">Не</label><br /><br />
+        
       </fieldset>
 
       <br />
@@ -214,7 +102,7 @@
       <fieldset>
         <legend><strong>Допълнителни коментари</strong></legend>
 
-        <label for="comments">5. Вашите коментари и впечатления: *</label><br />
+        <label for="comments">Моля споделете вашите коментари и впечатления: *</label><br />
         <textarea
           id="comments"
           name="comments"
@@ -225,77 +113,9 @@
         ></textarea
         ><br /><br />
 
-        <label for="improvements">Какво може да бъде подобрено?</label><br />
-        <textarea
-          id="improvements"
-          name="improvements"
-          rows="4"
-          cols="60"
-          placeholder="Вашите предложения за подобрение..."
-        ></textarea
-        ><br /><br />
-
-        <label for="file_upload">Прикачете снимка (ако желаете):</label><br />
-        <input
-          type="file"
-          id="file_upload"
-          name="file_upload"
-          accept="image/*"
-        /><br /><br />
-      </fieldset>
-
-      <br />
-
-      <input type="checkbox" id="consent" name="consent" required />
-      <label for="consent"
-        >Съгласен/съгласна съм мнението ми да бъде публикувано на сайта *</label
-      ><br /><br />
-
-      <input type="submit" value="Изпрати мнение" />
-      <input type="reset" value="Изчисти формата" />
-    </form>
-
-    <p><small>* Задължителни полета</small></p>
+         <input type="submit" value="Изпрати мнение" />
 
     <hr />
-
-    <h3>Мнения от клиенти</h3>
-    <table border="1" cellpadding="10" cellspacing="0" width="100%">
-      <tr>
-        <th>Клиент</th>
-        <th>Продукт</th>
-        <th>Оценка</th>
-        <th>Коментар</th>
-        <th>Дата</th>
-      </tr>
-      <tr>
-        <td><strong>Мария Петрова</strong></td>
-        <td>E-commerce платформа</td>
-        <td>⭐⭐⭐⭐⭐ 10/10</td>
-        <td>
-          <em
-            >"Изключително съм доволна! Професионално изпълнение и спазени
-            срокове."</em
-          >
-        </td>
-        <td>Октомври 2025</td>
-      </tr>
-      <tr>
-        <td><strong>Иван Стоянов</strong></td>
-        <td>Корпоративен сайт</td>
-        <td>⭐⭐⭐⭐ 9/10</td>
-        <td><em>"Много добра работа, препоръчвам!"</em></td>
-        <td>Септември 2025</td>
-      </tr>
-      <tr>
-        <td><strong>Елена Димитрова</strong></td>
-        <td>Landing Page</td>
-        <td>⭐⭐⭐⭐⭐ 10/10</td>
-        <td><em>"Перфектно! Точно каквото исках."</em></td>
-        <td>Август 2025</td>
-      </tr>
-    </table>
-
     <hr />
     <p>
       <small>&copy; 2025 WebProDev Solutions. Всички права запазени.</small>
