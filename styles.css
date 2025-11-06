@@ -1,4 +1,3 @@
-
 html,
 body {
   margin: 0;
@@ -417,4 +416,243 @@ body.zadacha2 {
 
 .visible-element {
   visibility: visible;
+}
+
+/* ======= ЗАДАНИЕ 6 ======= */
+
+/* 1. Промо лента в ъгъла на изображенията */
+.product-item::before {
+  content: "ПРОМОЦИЯ";
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: #ff5722;
+  color: white;
+  padding: 5px 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+  letter-spacing: 1px;
+}
+
+/* Само някои продукти да имат промо лента */
+.product-item:nth-child(1)::before,
+.product-item:nth-child(3)::before,
+.product-item:nth-child(5)::before {
+  content: "ПРОМОЦИЯ";
+}
+
+.product-item:nth-child(2)::before,
+.product-item:nth-child(4)::before,
+.product-item:nth-child(6)::before {
+  content: "";
+}
+
+/* 2. Символ на ЕС със звезди */
+.eu-flag {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  background: #003399;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.eu-stars {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.star {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffcc00;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transform-origin: center;
+  animation: starFlyAway 3s ease-in-out infinite;
+}
+
+/* Позициониране на 12-те звезди в кръг */
+.star:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 0s;
+}
+
+.star:nth-child(2) {
+  top: 7%;
+  right: 15%;
+  animation-delay: 0.25s;
+}
+
+.star:nth-child(3) {
+  top: 25%;
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+.star:nth-child(4) {
+  top: 50%;
+  right: 0;
+  animation-delay: 0.75s;
+}
+
+.star:nth-child(5) {
+  bottom: 25%;
+  right: 0;
+  animation-delay: 1s;
+}
+
+.star:nth-child(6) {
+  bottom: 7%;
+  right: 15%;
+  animation-delay: 1.25s;
+}
+
+.star:nth-child(7) {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  animation-delay: 1.5s;
+}
+
+.star:nth-child(8) {
+  bottom: 7%;
+  left: 15%;
+  animation-delay: 1.75s;
+}
+
+.star:nth-child(9) {
+  bottom: 25%;
+  left: 0;
+  animation-delay: 2s;
+}
+
+.star:nth-child(10) {
+  top: 50%;
+  left: 0;
+  animation-delay: 2.25s;
+}
+
+.star:nth-child(11) {
+  top: 25%;
+  left: 0;
+  animation-delay: 2.5s;
+}
+
+.star:nth-child(12) {
+  top: 7%;
+  left: 15%;
+  animation-delay: 2.75s;
+}
+
+/* Анимация - звездите отлитат към краищата на екрана */
+@keyframes starFlyAway {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(var(--fly-x, 0), var(--fly-y, 0)) scale(0.5) rotate(360deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(720deg);
+    opacity: 1;
+  }
+}
+
+/* Индивидуални посоки на отлитане за всяка звезда */
+.star:nth-child(1) {
+  --fly-x: 0;
+  --fly-y: -300px;
+}
+
+.star:nth-child(2) {
+  --fly-x: 250px;
+  --fly-y: -250px;
+}
+
+.star:nth-child(3) {
+  --fly-x: 300px;
+  --fly-y: -100px;
+}
+
+.star:nth-child(4) {
+  --fly-x: 300px;
+  --fly-y: 0;
+}
+
+.star:nth-child(5) {
+  --fly-x: 300px;
+  --fly-y: 100px;
+}
+
+.star:nth-child(6) {
+  --fly-x: 250px;
+  --fly-y: 250px;
+}
+
+.star:nth-child(7) {
+  --fly-x: 0;
+  --fly-y: 300px;
+}
+
+.star:nth-child(8) {
+  --fly-x: -250px;
+  --fly-y: 250px;
+}
+
+.star:nth-child(9) {
+  --fly-x: -300px;
+  --fly-y: 100px;
+}
+
+.star:nth-child(10) {
+  --fly-x: -300px;
+  --fly-y: 0;
+}
+
+.star:nth-child(11) {
+  --fly-x: -300px;
+  --fly-y: -100px;
+}
+
+.star:nth-child(12) {
+  --fly-x: -250px;
+  --fly-y: -250px;
+}
+
+/* Допълнителна анимация за въртене на целия кръг */
+.eu-flag:hover .eu-stars {
+  animation: rotateFull 10s linear infinite;
+}
+
+@keyframes rotateFull {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
