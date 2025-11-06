@@ -1,0 +1,164 @@
+/* Base (no menu styling here) */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f7f7fb;
+}
+
+h1 {
+  letter-spacing: 0.5px;
+}
+h2 {
+  margin-top: 1.2rem;
+}
+p em {
+  color: #444;
+}
+
+header,
+nav,
+section,
+footer,
+aside {
+  padding: 12px 16px;
+}
+
+section ul {
+  list-style: square inside;
+}
+section ol {
+  list-style: decimal;
+  padding-left: 18px;
+}
+
+.zadacha1 a:link {
+  color: #1565c0;
+  text-decoration: underline;
+}
+.zadacha1 a:visited {
+  color: #6a1b9a;
+  text-decoration: underline dotted;
+}
+.zadacha1 a:hover {
+  color: #ffffff;
+  background-color: #1565c0;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.15s ease-in-out;
+}
+.zadacha1 a:active {
+  color: #ffffff;
+  background-color: #c62828;
+  transform: scale(0.98);
+}
+
+/* Задание 1: Наслагване на фонове */
+body.zadacha1 {
+  background-color: #e9eef7;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png"),
+    url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  background-blend-mode: normal, multiply;
+  background-attachment: fixed, fixed;
+}
+
+.job-photo {
+  border: 4px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Задание 1: Форматиране, слагане на рамка и сянка */
+.zadacha1 table {
+  border-collapse: collapse;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.zadacha1 table th,
+.zadacha1 table td {
+  padding: 10px 12px;
+  border: 1px solid #d8e0ee;
+  text-align: left;
+}
+.zadacha1 table thead th {
+  background: #0d47a1;
+  color: #fff;
+}
+.zadacha1 table tr:nth-child(odd) {
+  background-color: #f7f9ff;
+}
+.zadacha1 table tr:nth-child(even) {
+  background-color: #eaf2ff;
+}
+
+body.zadacha2 {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f5ff 100%);
+}
+
+/* Новини за десен панел на страницата */
+.news-panel {
+  float: right;
+  width: 320px;
+  max-width: 90vw;
+  margin: 0 12px 12px 12px;
+  padding: 12px 14px;
+  background: #ffffff;
+  border: 1px solid #dfe5f0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.news-panel h3 {
+  margin: 6px 0 10px;
+  font-size: 1.15rem;
+}
+.news-item {
+  padding: 8px 0;
+  border-bottom: 1px dashed #d5dce9;
+}
+.news-item:last-child {
+  border-bottom: none;
+}
+
+/* Шрифтове */
+.news-item:nth-child(1) {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px
+  color: #b22222;
+}
+.news-item:nth-child(2) {
+  font-family: "Trebuchet MS", Tahoma, sans-serif;
+  font-size: 32px;
+  color: #0d47a1;
+}
+.news-item:nth-child(3) {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: #2e7d32;
+}
+
+
+@media (max-width: 800px) {
+  .news-panel {
+    float: none;
+    width: auto;
+  }
+}
+
+
+.zadacha2 table {
+  border-collapse: collapse;
+}
+.zadacha2 td,
+.zadacha2 th {
+  border: 1px solid #e3e7f2;
+  padding: 8px 10px;
+}
