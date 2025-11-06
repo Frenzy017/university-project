@@ -7,88 +7,102 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="zadacha2">
+    <!-- Рекламно каре -->
+    <div class="ad-banner">
+      <h3>🎉 Специална оферта!</h3>
+      <p>20% отстъпка на всички продукти до края на месеца!</p>
+      <a href="orders.html">Поръчай сега</a>
+    </div>
+
     <h1>WebProDev Solutions</h1>
     <hr />
 
-    <h2>Меню</h2>
-    <ul>
-      <li><a href="index.html">За фирмата</a></li>
-      <li><a href="products.html">Продукти</a></li>
-      <li><a href="orders.html">Поръчки</a></li>
-      <li><a href="reviews.html">Мнения</a></li>
-      <li><a href="../zadacha-1/page1.html">Работа</a></li>
-    </ul>
-    <hr />
+    <!-- Хоризонтално меню -->
+    <nav class="horizontal-menu">
+      <ul>
+        <li><a href="index.html">За фирмата</a></li>
+        <li><a href="products.html">Продукти</a></li>
+        <li><a href="orders.html">Поръчки</a></li>
+        <li><a href="reviews.html">Мнения</a></li>
+        <li><a href="../zadacha-1/page1.html">Работа</a></li>
+        <li><a href="partners.html">Партньори</a></li>
+        <li><a href="development.html">Развитие</a></li>
+        <li>
+          <a href="#">За собственика</a>
+          <ul class="submenu">
+            <li><a href="film.html">Филм</a></li>
+            <li><a href="music.html">Музика</a></li>
+            <li><a href="clip.html">Клип</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 
     <h2>Нашите продукти</h2>
     <p><em>Галерия на услугите и продуктите, които предлагаме</em></p>
 
-    <table border="1" cellpadding="15" cellspacing="0">
-      <tr>
-        <td align="center" width="250">
-          <img
-            src="test"
-            alt="Корпоративен сайт"
-            width="200"
-          /><br />
-          <strong>Корпоративен уеб сайт</strong><br />
-          Професионален сайт за вашата фирма<br />
-          <em>Цена: от 1500 лв</em>
-        </td>
-        <td align="center" width="250">
-          <img
-            src="test"
-            alt="E-commerce"
-            width="200"
-          /><br />
-          <strong>E-commerce платформа</strong><br />
-          Онлайн магазин с пълна функционалност<br />
-          <em>Цена: от 3000 лв</em>
-        </td>
-        <td align="center" width="250">
-          <img
-            src="test"
-            alt="React приложение"
-            width="200"
-          /><br />
-          <strong>React приложение</strong><br />
-          Модерно Single Page Application<br />
-          <em>Цена: от 2500 лв</em>
-        </td>
-      </tr>
-      <tr>
-        <td align="center">
-          <img
-            src="test"
-            alt="Landing page"
-            width="200"
-          /><br />
-          <strong>Landing Page</strong><br />
-          Ефективна целева страница<br />
-          <em>Цена: от 800 лв</em>
-        </td>
-        <td align="center">
-          <img
-            src="test"
-            alt="WordPress сайт"
-            width="200"
-          /><br />
-          <strong>WordPress сайт</strong><br />
-          Лесен за управление CMS сайт<br />
-          <em>Цена: от 1200 лв</em>
-        </td>
-        <td align="center">
-          <img
-            src="test"
-            alt="SEO оптимизация"
-            width="200"
-          /><br />
-          <strong>SEO оптимизация</strong><br />
-          Подобряване на позициите в Google<br />
-          <em>Цена: от 500 лв/месец</em>
-        </td>
-      </tr>
-    </table>
+    <!-- Продуктова галерия с ефекти -->
+    <div class="product-gallery">
+      <div class="product-item">
+        <img
+          src="https://via.placeholder.com/300x200/0d47a1/ffffff?text=Corporate+Website"
+          alt="Корпоративен сайт"
+        />
+        <strong>Корпоративен уеб сайт</strong>
+        <p>Професионален сайт за вашата фирма</p>
+        <em>Цена: от 1500 лв</em>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="https://via.placeholder.com/300x200/1565c0/ffffff?text=E-commerce"
+          alt="E-commerce"
+        />
+        <strong>E-commerce платформа</strong>
+        <p>Онлайн магазин с пълна функционалност</p>
+        <em>Цена: от 3000 лв</em>
+      </div>
+
+      <div class="product-item">
+        <img
+          src="https://via.placeholder.com/300x200/1976d2/ffffff?text=React+App"
+          alt="React приложение"
+        />
+        <strong>React приложение</strong>
+        <p>Модерно Single Page Application</p>
+        <em>Цена: от 2500 лв</em>
+      </div>
+
+      <div class="product-item opacity-effect">
+        <img
+          src="https://via.placeholder.com/300x200/42a5f5/ffffff?text=Landing+Page"
+          alt="Landing page"
+        />
+        <strong>Landing Page</strong>
+        <p>Ефективна целева страница</p>
+        <em>Цена: от 800 лв</em>
+      </div>
+
+      <div class="product-item opacity-effect">
+        <img
+          src="https://via.placeholder.com/300x200/64b5f6/ffffff?text=WordPress"
+          alt="WordPress сайт"
+        />
+        <strong>WordPress сайт</strong>
+        <p>Лесен за управление CMS сайт</p>
+        <em>Цена: от 1200 лв</em>
+      </div>
+
+      <div class="product-item opacity-effect">
+        <img
+          src="https://via.placeholder.com/300x200/90caf9/ffffff?text=SEO"
+          alt="SEO оптимизация"
+        />
+        <strong>SEO оптимизация</strong>
+        <p>Подобряване на позициите в Google</p>
+        <em>Цена: от 500 лв/месец</em>
+      </div>
+    </div>
 
     <p>
       <a href="orders.html"><strong>→ Поръчайте сега</strong></a>

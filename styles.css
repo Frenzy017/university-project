@@ -5,12 +5,14 @@ body {
   padding: 0;
 }
 body {
-  font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
   color: #222;
   background-color: #f7f7fb;
+  position: relative;
 }
 
+/* Headings and text */
 h1 {
   letter-spacing: 0.5px;
 }
@@ -21,6 +23,7 @@ p em {
   color: #444;
 }
 
+/* Containers */
 header,
 nav,
 section,
@@ -29,6 +32,7 @@ aside {
   padding: 12px 16px;
 }
 
+/* Lists (not affecting nav) */
 section ul {
   list-style: square inside;
 }
@@ -37,6 +41,7 @@ section ol {
   padding-left: 18px;
 }
 
+/* Links — Задание 1 only */
 .zadacha1 a:link {
   color: #1565c0;
   text-decoration: underline;
@@ -59,32 +64,34 @@ section ol {
   transform: scale(0.98);
 }
 
-/* Задание 1: Наслагване на фонове */
+/* Задание 1: layered backgrounds for both pages */
 body.zadacha1 {
+  /* Two layered image patterns + base color */
   background-color: #e9eef7;
-  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png"),
-    url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
+  background-image:
+    url('https://www.transparenttextures.com/patterns/diagmonds.png'),
+    url('https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png');
   background-blend-mode: normal, multiply;
   background-attachment: fixed, fixed;
 }
 
+/* Image border + shadow (page1 image) */
 .job-photo {
   border: 4px solid #333;
   border-radius: 8px;
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* Задание 1: Форматиране, слагане на рамка и сянка */
+/* Задание 1: Table formatting (zebra, borders) */
 .zadacha1 table {
   border-collapse: collapse;
   width: 100%;
   background: #fff;
   overflow: hidden;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
-.zadacha1 table th,
-.zadacha1 table td {
+.zadacha1 table th, .zadacha1 table td {
   padding: 10px 12px;
   border: 1px solid #d8e0ee;
   text-align: left;
@@ -100,11 +107,12 @@ body.zadacha1 {
   background-color: #eaf2ff;
 }
 
+/* General look for zadacha-2 pages (light gradient) */
 body.zadacha2 {
   background: linear-gradient(180deg, #ffffff 0%, #f3f5ff 100%);
 }
 
-/* Новини за десен панел на страницата */
+/* News right panel (index.html) */
 .news-panel {
   float: right;
   width: 320px;
@@ -114,7 +122,7 @@ body.zadacha2 {
   background: #ffffff;
   border: 1px solid #dfe5f0;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 .news-panel h3 {
   margin: 6px 0 10px;
@@ -124,28 +132,26 @@ body.zadacha2 {
   padding: 8px 0;
   border-bottom: 1px dashed #d5dce9;
 }
-.news-item:last-child {
-  border-bottom: none;
-}
+.news-item:last-child { border-bottom: none; }
 
-/* Шрифтове */
+/* Different font/size/color per news item */
 .news-item:nth-child(1) {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 16px
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 0.98rem;
   color: #b22222;
 }
 .news-item:nth-child(2) {
-  font-family: "Trebuchet MS", Tahoma, sans-serif;
-  font-size: 32px;
+  font-family: 'Trebuchet MS', Tahoma, sans-serif;
+  font-size: 1rem;
   color: #0d47a1;
 }
 .news-item:nth-child(3) {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
   color: #2e7d32;
 }
 
-
+/* Make room for aside on small screens */
 @media (max-width: 800px) {
   .news-panel {
     float: none;
@@ -153,12 +159,274 @@ body.zadacha2 {
   }
 }
 
-
+/* Tables in zadacha-2 (basic cleanup, not menus) */
 .zadacha2 table {
   border-collapse: collapse;
 }
-.zadacha2 td,
-.zadacha2 th {
+.zadacha2 td, .zadacha2 th {
   border: 1px solid #e3e7f2;
   padding: 8px 10px;
+}
+
+/* ======= ЗАДАНИЕ 5 ======= */
+
+/* 1. Продуктова галерия с ефекти */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-item {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.product-item:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  opacity: 0.9;
+}
+
+.product-item:hover img {
+  opacity: 1;
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.product-item strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #0d47a1;
+}
+
+.product-item em {
+  display: block;
+  margin-top: 5px;
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* 2. Рекламно каре - фиксирано позициониране */
+.ad-banner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 250px;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 1000;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+.ad-banner h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+}
+
+.ad-banner p {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.ad-banner a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.ad-banner a:hover {
+  background: #f0f0f0;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* 3. Хоризонтално меню */
+.horizontal-menu {
+  background: #0d47a1;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.horizontal-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.horizontal-menu li {
+  position: relative;
+}
+
+.horizontal-menu a {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.horizontal-menu a:hover {
+  background: #1565c0;
+}
+
+/* Submenu for horizontal */
+.horizontal-menu .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1565c0;
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.horizontal-menu li:hover .submenu {
+  display: block;
+}
+
+.horizontal-menu .submenu li {
+  display: block;
+}
+
+.horizontal-menu .submenu a {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.horizontal-menu .submenu a:hover {
+  background: #1976d2;
+}
+
+/* 4. Вертикално меню */
+.vertical-menu {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  width: 200px;
+  background: #263238;
+  padding: 0;
+  margin: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  z-index: 998;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+.vertical-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vertical-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.vertical-menu a {
+  display: block;
+  padding: 15px 20px;
+  color: #eceff1;
+  text-decoration: none;
+  transition: background 0.3s ease, padding-left 0.3s ease;
+}
+
+.vertical-menu a:hover {
+  background: #37474f;
+  padding-left: 30px;
+}
+
+/* Submenu for vertical */
+.vertical-menu .submenu {
+  display: none;
+  background: #37474f;
+  padding-left: 20px;
+}
+
+.vertical-menu li:hover .submenu {
+  display: block;
+}
+
+.vertical-menu .submenu a {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.vertical-menu .submenu a:hover {
+  background: #455a64;
+}
+
+/* Content offset for vertical menu */
+.with-vertical-menu {
+  margin-left: 220px;
+}
+
+@media (max-width: 800px) {
+  .vertical-menu {
+    position: static;
+    width: 100%;
+    max-height: none;
+  }
+  
+  .with-vertical-menu {
+    margin-left: 0;
+  }
+  
+  .ad-banner {
+    position: static;
+    margin: 20px auto;
+    width: 90%;
+  }
+}
+
+/* Прозрачност и видимост */
+.opacity-effect {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.opacity-effect:hover {
+  opacity: 1;
+}
+
+.hidden-element {
+  visibility: hidden;
+}
+
+.visible-element {
+  visibility: visible;
 }

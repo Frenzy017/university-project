@@ -7,86 +7,86 @@
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body class="zadacha2">
-    <!-- Заглавен панел -->
-    <header>
-      <h1>WebProDev Solutions</h1>
-      <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">   <!-- Задание 3 -->
-        <rect width="250" height="250" fill="black" />  <!-- Задание 3 -->
-        <text x="50" y="50" font-size="15" text-anchor="middle" fill="white">WebProDev</text>  <!-- Задание 3 -->
-      </svg>
-      <p><em>Вашият партньор за иновативни уеб решения</em></p>
-    </header>
-    <hr />
-    
-    <!-- Меню -->
-    <nav>
-      <h2>Меню</h2>
+    <!-- Вертикално меню -->
+    <nav class="vertical-menu">
       <ul>
         <li><a href="index.html">За фирмата</a></li>
         <li><a href="products.html">Продукти</a></li>
         <li><a href="orders.html">Поръчки</a></li>
         <li><a href="reviews.html">Мнения</a></li>
         <li><a href="../zadacha-1/page1.html">Работа</a></li>
-        <li><a href="partners.html">Партньори</a> <!-- Задание 3 -->
-        <li><a href="development.html">Развитие</a> <!-- Задание 3 -->
+        <li><a href="partners.html">Партньори</a></li>
+        <li><a href="development.html">Развитие</a></li>
         <li>
-          За собственика <!-- Задание 3 -->
-          <ul>
-            <li><a href="film.html">Филм</a>  <!-- Задание 3 -->
-            <li><a href="music.html">Музика</a>  <!-- Задание 3 -->
-            <li><a href="clip.html">Клип</a>  <!-- Задание 3 -->
+          <a href="#">За собственика</a>
+          <ul class="submenu">
+            <li><a href="film.html">Филм</a></li>
+            <li><a href="music.html">Музика</a></li>
+            <li><a href="clip.html">Клип</a></li>
           </ul>
         </li>
       </ul>
     </nav>
-    <hr />
 
-    <!-- Десен панел: Новини -->
-    <aside class="news-panel">
-      <h3>Новини</h3>
-      <div class="news-item">
-        <strong>05.11.2025</strong> — Търсим Front-end програмист за нашия екип.
-      </div>
-      <div class="news-item">
-        <strong>28.10.2025</strong> — Нов e-commerce проект стартира успешно.
-      </div>
-      <div class="news-item">
-        <strong>12.10.2025</strong> — Пуснахме нова версия на React компонентите.
-      </div>
-    </aside>
+    <div class="with-vertical-menu">
+      <!-- Заглавен панел -->
+      <header>
+        <h1>WebProDev Solutions</h1>
+        <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" fill="#0d47a1" />
+          <text x="50" y="55" font-size="16" text-anchor="middle" fill="white">WebProDev</text>
+        </svg>
+        <p><em>Вашият партньор за иновативни уеб решения</em></p>
+      </header>
+      <hr />
 
-    <!-- Основен панел -->
-    <section>
-      <h2>За фирмата</h2>
+      <!-- Десен панел: Новини -->
+      <aside class="news-panel">
+        <h3>Новини</h3>
+        <div class="news-item">
+          <strong>05.11.2025</strong> — Търсим Front-end програмист за нашия екип.
+        </div>
+        <div class="news-item">
+          <strong>28.10.2025</strong> — Нов e-commerce проект стартира успешно.
+        </div>
+        <div class="news-item">
+          <strong>12.10.2025</strong> — Пуснахме нова версия на React компонентите.
+        </div>
+      </aside>
+
+      <!-- Основен панел -->
+      <section>
+        <h2>За фирмата</h2>
+        <p>
+          <strong>WebDev Solutions</strong> е водеща компания в областта на уеб
+          разработката, основана през 2015 година.
+        </p>
+
+        <h3>Нашите услуги:</h3>
+        <ul>
+          <li>Разработка на корпоративни уеб сайтове</li>
+          <li>Изграждане на e-commerce платформи</li>
+          <li>Responsive дизайн и оптимизация</li>
+          <li>SEO и дигитален маркетинг</li>
+        </ul>
+
+        <h3>Защо да изберете нас?</h3>
+        <ol>
+          <li><strong>Опит</strong> - Над 5 години на пазара</li>
+          <li><strong>Качество</strong> - Следваме най-новите стандарти</li>
+          <li><strong>Поддръжка</strong> - 24/7 техническа помощ</li>
+          <li><strong>Цени</strong> - Конкурентни и справедливи</li>
+        </ol>
+
+        <p>
+          <em>Свържете се с нас: info@webprodevsolutions.bg | Тел: 02/123-4567</em>
+        </p>
+      </section>
+
+      <hr />
       <p>
-        <strong>WebDev Solutions</strong> е водеща компания в областта на уеб
-        разработката, основана през 2015 година.
+        <small>&copy; 2025 WebProDev Solutions. Всички права запазени.</small>
       </p>
-
-      <h3>Нашите услуги:</h3>
-      <ul>
-        <li>Разработка на корпоративни уеб сайтове</li>
-        <li>Изграждане на e-commerce платформи</li>
-        <li>Responsive дизайн и оптимизация</li>
-        <li>SEO и дигитален маркетинг</li>
-      </ul>
-
-      <h3>Защо да изберете нас?</h3>
-      <ol>
-        <li><strong>Опит</strong> - Над 5 години на пазара</li>
-        <li><strong>Качество</strong> - Следваме най-новите стандарти</li>
-        <li><strong>Поддръжка</strong> - 24/7 техническа помощ</li>
-        <li><strong>Цени</strong> - Конкурентни и справедливи</li>
-      </ol>
-
-      <p>
-        <em>Свържете се с нас: info@webprodevsolutions.bg | Тел: 02/123-4567</em>
-      </p>
-    </section>
-
-    <hr />
-    <p>
-      <small>&copy; 2025 WebProDev Solutions. Всички права запазени.</small>
-    </p>
+    </div>
   </body>
 </html>
