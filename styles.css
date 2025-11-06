@@ -1,4 +1,4 @@
-/* Base (no menu styling here) */
+
 html,
 body {
   margin: 0;
@@ -12,7 +12,7 @@ body {
   position: relative;
 }
 
-/* Headings and text */
+
 h1 {
   letter-spacing: 0.5px;
 }
@@ -23,7 +23,7 @@ p em {
   color: #444;
 }
 
-/* Containers */
+
 header,
 nav,
 section,
@@ -32,7 +32,6 @@ aside {
   padding: 12px 16px;
 }
 
-/* Lists (not affecting nav) */
 section ul {
   list-style: square inside;
 }
@@ -64,9 +63,7 @@ section ol {
   transform: scale(0.98);
 }
 
-/* Задание 1: layered backgrounds for both pages */
 body.zadacha1 {
-  /* Two layered image patterns + base color */
   background-color: #e9eef7;
   background-image:
     url('https://www.transparenttextures.com/patterns/diagmonds.png'),
@@ -75,14 +72,12 @@ body.zadacha1 {
   background-attachment: fixed, fixed;
 }
 
-/* Image border + shadow (page1 image) */
 .job-photo {
   border: 4px solid #333;
   border-radius: 8px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* Задание 1: Table formatting (zebra, borders) */
 .zadacha1 table {
   border-collapse: collapse;
   width: 100%;
@@ -107,12 +102,10 @@ body.zadacha1 {
   background-color: #eaf2ff;
 }
 
-/* General look for zadacha-2 pages (light gradient) */
 body.zadacha2 {
   background: linear-gradient(180deg, #ffffff 0%, #f3f5ff 100%);
 }
 
-/* News right panel (index.html) */
 .news-panel {
   float: right;
   width: 320px;
@@ -134,7 +127,6 @@ body.zadacha2 {
 }
 .news-item:last-child { border-bottom: none; }
 
-/* Different font/size/color per news item */
 .news-item:nth-child(1) {
   font-family: Georgia, 'Times New Roman', serif;
   font-size: 0.98rem;
@@ -151,7 +143,6 @@ body.zadacha2 {
   color: #2e7d32;
 }
 
-/* Make room for aside on small screens */
 @media (max-width: 800px) {
   .news-panel {
     float: none;
@@ -159,7 +150,6 @@ body.zadacha2 {
   }
 }
 
-/* Tables in zadacha-2 (basic cleanup, not menus) */
 .zadacha2 table {
   border-collapse: collapse;
 }
@@ -370,7 +360,7 @@ body.zadacha2 {
   padding-left: 30px;
 }
 
-/* Submenu for vertical */
+
 .vertical-menu .submenu {
   display: none;
   background: #37474f;
@@ -390,7 +380,6 @@ body.zadacha2 {
   background: #455a64;
 }
 
-/* Content offset for vertical menu */
 .with-vertical-menu {
   margin-left: 220px;
 }
@@ -413,7 +402,6 @@ body.zadacha2 {
   }
 }
 
-/* Прозрачност и видимост */
 .opacity-effect {
   opacity: 0.7;
   transition: opacity 0.3s ease;
