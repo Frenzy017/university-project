@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Музика - WebProDev Solutions</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <title>Музика</title>
 </head>
-<body class="zadacha2">
-    <h1>Моята любима песен</h1>
-    <audio controls>
-        <source src="FAR AWAY NEVERTEL" type="audio/mpeg">
-       
+<body>
+    <h1>Релаксираща музика</h1>
+    <audio id="myAudio" controls>
+        <source src="https://www.bensound.com/bensound-music/bensound-ukulele.mp3" type="audio/mpeg">
+        <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mpeg">
+        Вашият браузър не поддържа audio елемента.
     </audio>
-    <hr />
-    <p><a href="index.html">Назад към началната страница</a></p>
+
+    <p>
+        <button onclick="document.getElementById('myAudio').play()">▶ Пусни</button>
+        <button onclick="document.getElementById('myAudio').pause()">⏸ Пауза</button>
+        <button onclick="document.getElementById('myAudio').currentTime=0">⏮ Рестартирай</button>
+    </p>
+
+    <p>
+        <button onclick="changeVolume(0.3)">🔊 30%</button>
+        <button onclick="changeVolume(0.6)">🔊 60%</button>
+        <button onclick="changeVolume(1.0)">🔊 100%</button>
+    </p>
+
+    <script>
+        function changeVolume(level) {
+            document.getElementById('myAudio').volume = level;
+        }
+    </script>
+
+    <p><a href="index.html">Назад</a></p>
 </body>
 </html>
